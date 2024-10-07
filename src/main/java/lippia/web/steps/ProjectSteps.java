@@ -31,9 +31,4 @@ public class ProjectSteps extends PageSteps {
         borrarProyectos();
     }
 
-    @When("click on the create button")
-    public void clickOnTheCreateButton() {
-        clickButtonCreate();
-    }
-
 }

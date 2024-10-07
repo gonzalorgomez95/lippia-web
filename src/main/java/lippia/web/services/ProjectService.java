@@ -29,52 +29,46 @@ public class ProjectService extends ActionManager {
         setInput(CAMPO_NAME_PROYECTO, randomName);
     }
 
-    public static void clickiconProject() {
+    public static void clicIconoProjects() {
         click(ICONO_SECCION_PROJECTS);
     }
 
-    public static void closeAlert() {
+    public static void cerrarMensaje() {
         getFluentWait();
         waitClickable(CERRAR_MENSAJE_PANTALLA).click();
     }
 
-    public static void clickIconMenuDrawer() {
+    public static void clicMenuHamburguesa() {
         waitClickable(ICON_MENU_HAMBURGUER).click();
     }
 
-    public static void clickArchiveProject() {
+    public static void clickOpcionArchivar() {
         click(OPCION_ARCHIVAR);
         waitVisibility(BOTON_MODAL_ARCHIVAR);
         click(BOTON_MODAL_ARCHIVAR);
-        closeAlert();
+        cerrarMensaje();
     }
 
-    public static void scrollToElement(WebElement element) {
+    public static void scroll(WebElement element) {
         WebDriver driver = DriverManager.getDriverInstance();
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-    public static void clickOptionDelete() {
+    public static void clicOpcionBorrar() {
         waitPresence(OPCION_BORRAR);
-
         WebElement element = getElement(OPCION_BORRAR);
-        scrollToElement(element);
+        scroll(element);
         waitClickable(OPCION_BORRAR).click();
-
         waitClickable(CONFIRMAR_BOTON_BORRAR).click();
 
     }
 
     public static void borrarProyectos() {
-        clickiconProject();
-        clickIconMenuDrawer();
-        clickArchiveProject();
-        clickIconMenuDrawer();
-        clickOptionDelete();
-    }
-
-    public static void clickButtonCreate() {
-        waitClickable(BOTON_CREATE).click();
+        clicIconoProjects();
+        clicMenuHamburguesa();
+        clickOpcionArchivar();
+        clicMenuHamburguesa();
+        clicOpcionBorrar();
     }
 }
