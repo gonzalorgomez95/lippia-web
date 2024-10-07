@@ -11,4 +11,12 @@ public class ClockifyConstants {
     public static final String LOGO_PERFIL = "xpath://a[.='TU']";
     public static final String OPCION_LOGOUT = "xpath://a[@data-cy='logout']";
 
+//LOCATORS DE WORKSPACES
+    public static final String BUTTON_WORKSPACE = "xpath://img[@alt='Workspace dropdown options']";
+    public static final String TEXT_MANAGE = "xpath://a[@routerlink='/workspaces']";
+    public static final String TEXT_BUTTON_CREATE_WORKSPACE = "xpath://button[@type='button'][contains(.,'Create new workspace')]";
+    public static final String INPUT_NAME_WORKSPACE = "xpath://input[@formcontrolname='name']";
+    public static final String BUTTON_CREATE = "xpath://button[@class='cl-btn cl-btn-primary']";
+    public static final String ALERT_TEXT_CONFIRM = "xpath:(//div[contains(.,'has been created')])[4]";
+
 }
