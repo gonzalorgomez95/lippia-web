@@ -18,7 +18,11 @@ public class ClockifyConstants {
     public static final String BOTON_CREATE_WORKSPACE = "xpath://button[@type='button'][contains(.,'Create new workspace')]";
     public static final String CAMPO_NAME_WORKSPACE = "xpath://input[@formcontrolname='name']";
     public static final String BOTON_CREATE = "xpath://button[@class='cl-btn cl-btn-primary']";
-    public static final String MENSAJE_PANTALLA_WORKSPACE = "xpath:(//div[contains(.,'has been created')])[4]";
+    public static final String BOTON_SETTINGS = "xpath://workspace-row[1]//button[@class='cl-btn cl-btn-primary cl-ml-3 cl-d-print-none']";
+    public static final String CAMPO_NOMBRE_SETTINGS = "xpath://input[@id='workspaceName']";
+    public static final String CLIC_PAGINA = "xpath://settings-tab[@class='ng-star-inserted']/hr[1]";
+    public static final String MENSAJE_CREA_WORKSPACE = "xpath:(//div[contains(.,'has been created')])[4]";
+    public static final String MENSAJE_ACTULIZA_WORKSPACE = "xpath:(//div[contains(.,'have been updated')])[4]";
 
 //LOCATORS DE PROYECTOS
     public static final String ENLACE_PROYECTOS = "xpath:(//img[@src='assets/ui-icons/plus-blue.svg'])[1]";

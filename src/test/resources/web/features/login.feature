@@ -1,5 +1,5 @@
 @regresion
-Feature: Login.
+Feature: Login
 
   @login @manual @smoke
   Scenario: Login - Login exitoso con con email y password correctos.

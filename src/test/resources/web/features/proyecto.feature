@@ -1,5 +1,5 @@
 @regresion
-Feature: Crear Proyecto.
+Feature: Proyecto
 
   @proyectos @crear @publico @smoke
   Scenario: Crear Proyecto - Crear proyecto exitoso desde seccion Time Tracker.

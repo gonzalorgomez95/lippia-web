@@ -39,4 +39,19 @@ public class WorkspaceService extends ActionManager {
     public static void workspaceClicBotonCreate() {
         waitClickable(BOTON_CREATE).click();
     }
+
+    public static void workspaceClicBotonSettings(){
+        waitClickable(BOTON_SETTINGS).click();
+    }
+
+    public static void ingresaCaracteres(){
+        String randomName = generateRandomName();
+        waitClickable(CAMPO_NOMBRE_SETTINGS).click();
+        setInput(CAMPO_NOMBRE_SETTINGS, randomName, true, true);
+    }
+
+    public static void clicPantallaSettings(){
+        waitClickable(CLIC_PAGINA).click();
+    }
+
 }

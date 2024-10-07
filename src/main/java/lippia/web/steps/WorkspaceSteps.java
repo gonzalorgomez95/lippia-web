@@ -42,8 +42,29 @@ public class WorkspaceSteps extends PageSteps {
         workspaceClicBotonCreate();
     }
 
-    @Then("se visualiza el mensaje de confirmacion de workspaces")
-    public void modalConfirmacionWorkspaces() {
-        validarConfirmacionWorkspace();
+    @When("hace clic en el boton \"Settings\"")
+    public void clicBotonSetting() {
+        workspaceClicBotonSettings();
     }
+
+    @Then("se visualiza el mensaje de creacion de workspace")
+    public void modalCreacionWorkspaces() {
+        validarCreacionWorkspace();
+    }
+
+    @And("hace clic en la pantalla")
+    public void clicPantalla() {
+        clicPantallaSettings();
+    }
+
+    @And("en el campo nombre se actualiza")
+    public void actualizarNombre() {
+        ingresaCaracteres();
+    }
+
+    @Then("se visualiza el mensaje de actualizacion de workspace")
+    public void modalActualizacionWorkspaces() {
+        validarActualizarWorkspace();
+    }
+
 }
