@@ -9,16 +9,16 @@ import static lippia.web.constants.ClockifyConstants.*;
 public class WorkspaceService extends ActionManager {
 
     public static void opcionesWorkspaces() {
-        waitClickable(BUTTON_WORKSPACE).click();
+        waitClickable(BOTON_WORKSPACE).click();
     }
 
     public static void opcionManageWorkspaces() {
-        waitClickable(TEXT_MANAGE).click();
+        waitClickable(OPCION_MANAGE).click();
     }
 
 
     public static void clicBotonCrearWorkspace() {
-        waitClickable(TEXT_BUTTON_CREATE_WORKSPACE).click();
+        waitClickable(BOTON_CREATE_WORKSPACE).click();
     }
 
 
@@ -31,12 +31,12 @@ public class WorkspaceService extends ActionManager {
 
     public static void completarNombreWorkspace() {
         String randomName = "Workspace: " + generateRandomName();
-        waitClickable(INPUT_NAME_WORKSPACE).click();
-        setInput(INPUT_NAME_WORKSPACE, randomName, true, true);
+        waitClickable(CAMPO_NAME_WORKSPACE).click();
+        setInput(CAMPO_NAME_WORKSPACE, randomName, true, true);
 
     }
 
-    public static void clicBotonCreate() {
-        waitClickable(BUTTON_CREATE).click();
+    public static void workspaceClicBotonCreate() {
+        waitClickable(BOTON_CREATE).click();
     }
 }

@@ -38,12 +38,12 @@ public class WorkspaceSteps extends PageSteps {
     }
 
     @When("hace clic en el boton \"Create\"")
-    public void clickOnTheCreateButton() {
-        clicBotonCreate();
+    public void clicBotonCreate() {
+        workspaceClicBotonCreate();
     }
 
-    @Then("se visualiza el mensaje de confirmacion en pantalla")
-    public void modalConfirmacion() {
-        validarConfirmacion();
+    @Then("se visualiza el mensaje de confirmacion de workspaces")
+    public void modalConfirmacionWorkspaces() {
+        validarConfirmacionWorkspace();
     }
 }
