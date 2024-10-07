@@ -32,9 +32,8 @@ public class LoginService extends ActionManager {
     }
 
     public static void validarURL(String url) {
-        String valorURL = url;
         String actualURL = getDriverInstance().getCurrentUrl();
-        Assert.assertEquals(valorURL, actualURL);
+        Assert.assertEquals(url, actualURL);
     }
 
     public static void clicLogoPerfil() {
