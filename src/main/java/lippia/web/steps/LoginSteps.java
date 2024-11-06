@@ -61,4 +61,13 @@ public class LoginSteps extends PageSteps {
     public void validaLogout() {
         validarCierreSesion();
     }
+
+    @Given("el usuario se encuentra logueado")
+    public void loguearUsuario() {
+        navegarURL();
+        clicLoginManual();
+        completarLoginEmail();
+        completarLoginPassword();
+        clicBotonLogin();
+    }
 }
